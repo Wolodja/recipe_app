@@ -1,6 +1,11 @@
 package guru.springframework.recipe_app.domain;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Notes {
@@ -13,7 +18,7 @@ public class Notes {
     private Recipe recipe;
 
     @Lob
-    private String recipeNote;
+    private String recipeNotes;
 
     public Long getId() {
         return id;
@@ -31,11 +36,11 @@ public class Notes {
         this.recipe = recipe;
     }
 
-    public String getRecipeNote() {
-        return recipeNote;
+    public String getRecipeNotes() {
+        return recipeNotes;
     }
 
-    public void setRecipeNote(String recipeNote) {
-        this.recipeNote = recipeNote;
+    public void setRecipeNotes(String recipeNote) {
+        this.recipeNotes = recipeNote;
     }
 }
