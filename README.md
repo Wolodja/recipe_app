@@ -2,4 +2,4 @@
 
 [![codecov](https://codecov.io/gh/Wolodja/recipe_app/branch/master/graph/badge.svg)](https://codecov.io/gh/Wolodja/recipe_app)
 # Recipe App
-Spring Boot MVC application for Recipe processing
+Spring Boot MVC application for Recipe processing.
