@@ -1,11 +1,17 @@
 package guru.springframework.recipe_app.bootstrap;
 
-import guru.springframework.recipe_app.domain.*;
+import guru.springframework.recipe_app.domain.Category;
+import guru.springframework.recipe_app.domain.Difficulty;
+import guru.springframework.recipe_app.domain.Ingredient;
+import guru.springframework.recipe_app.domain.Notes;
+import guru.springframework.recipe_app.domain.Recipe;
+import guru.springframework.recipe_app.domain.UnitOfMeasure;
 import guru.springframework.recipe_app.repositories.CategoryRepository;
 import guru.springframework.recipe_app.repositories.RecipeRepository;
 import guru.springframework.recipe_app.repositories.UnitOfMeasureRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationListener;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
@@ -20,6 +26,7 @@ import java.util.Optional;
  */
 @Slf4j
 @Component
+@Profile("default")
 public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEvent> {
 
     private final CategoryRepository categoryRepository;
